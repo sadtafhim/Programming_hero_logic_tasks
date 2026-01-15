@@ -9,19 +9,21 @@ Input: "hello"
 Output: false
 */
 
-let input = "madam";
-let checker = true;
-let i = 0;
-let j = input.length - 1;
+function palindromeChecker(input) {
+  let checker = true;
+  let i = 0;
+  let j = input.length - 1;
 
-while (i < j) {
-  if (input[i] == input[j]) {
-    j -= 1;
-    i += 1;
-    continue;
-  } else {
-    checker = false;
-    break;
+  while (i < j) {
+    if (input[i] == input[j]) {
+      j -= 1;
+      i += 1;
+      continue;
+    } else {
+      checker = false;
+      break;
+    }
   }
+  return checker;
 }
-console.log(checker);
+console.log(palindromeChecker("madam"));

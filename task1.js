@@ -7,15 +7,18 @@ Input: "hello"
 Output: "olleh"
 */
 
-let input = "hello";
+function reverser(input) {
+  let checker = [];
+  let i = input.length - 1;
 
-let checker = [];
-let i = input.length - 1;
+  while (i >= 0) {
+    checker.push(input.charAt(i));
+    i--;
+  }
 
-while (i >= 0) {
-  checker.push(input.charAt(i));
-  i--;
+  checker = checker.join("");
+  return checker;
 }
 
-checker = checker.join("");
-console.log(checker);
+let input = "hello";
+console.log(reverser(input));

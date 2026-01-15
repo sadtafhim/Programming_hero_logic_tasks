@@ -8,16 +8,19 @@ Input: "programming"
 Output: 3
 */
 
-const vowels = ["a", "e", "i", "o", "u"];
-let input = "programming";
-let count = 0;
-i = 0;
+function vowelCounter(input) {
+  const vowels = ["a", "e", "i", "o", "u"];
+  let count = 0;
+  i = 0;
 
-while (i < input.length) {
-  if (vowels.includes(input[i])) {
-    count += 1;
+  while (i < input.length) {
+    if (vowels.includes(input[i])) {
+      count += 1;
+    }
+    i++;
   }
-  i++;
+
+  return count;
 }
 
-console.log(count);
+console.log(vowelCounter("programming"));

@@ -8,12 +8,15 @@ Input: [1, 2, 3, 4]
 Output: 10
 */
 
-let input = [1, 2, 3, 4];
-let total = 0;
-let i = 0;
-while (i < input.length) {
-  total += input[i];
-  i++;
+function totalFinder(input) {
+  let total = 0;
+  let i = 0;
+  while (i < input.length) {
+    total += input[i];
+    i++;
+  }
+
+  return total;
 }
 
-console.log(total);
+console.log(totalFinder([1, 2, 3, 4]));
